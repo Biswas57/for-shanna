@@ -4,9 +4,7 @@
     "description": "A beautiful animated flower display with reddish-pink roses and custom messages",
     "main": "index.html",
     "scripts": {
-        "dev": "python3 -m http.server 8000",
-        "build": "sass scss/style.scss css/style.css",
-        "watch": "sass --watch scss/style.scss css/style.css"
+        "dev": "python3 -m http.server 8000"
     },
     "keywords": [
         "flowers",
@@ -18,8 +16,5 @@
         "gift"
     ],
     "author": "Your Name",
-    "license": "MIT",
-    "devDependencies": {
-        "sass": "^1.64.0"
-    }
+    "license": "MIT"
 }
