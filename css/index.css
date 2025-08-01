@@ -26,23 +26,18 @@
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  gap: clamp(1rem, 3vh, 2.5rem);
-  overflow-y: auto;
 }
 
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
   .main-container {
     padding: 0.5rem;
-    gap: clamp(0.8rem, 2vh, 1.5rem);
-    justify-content: flex-start;
-    padding-top: 20vh;
   }
 }
 
@@ -60,10 +55,18 @@
 }
 
 .button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
+  position: fixed;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+/* Mobile button positioning */
+@media (max-width: 768px) {
+  .button-container {
+    bottom: 8vh;
+  }
 }
 
 @media (min-width: 500px) {
