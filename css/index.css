@@ -26,13 +26,24 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
-  gap: clamp(2rem, 5vh, 4rem);
+  padding: 1rem;
+  gap: clamp(1rem, 3vh, 2.5rem);
+  overflow-y: auto;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 0.5rem;
+    gap: clamp(0.8rem, 2vh, 1.5rem);
+    justify-content: flex-start;
+    padding-top: 20vh;
+  }
 }
 
 .title {
@@ -94,6 +105,16 @@ a {
   background: #1C1A1C;
   cursor: pointer;
   transition: all 450ms ease-in-out;
+  flex-shrink: 0;
+}
+
+/* Mobile button adjustments */
+@media (max-width: 768px) {
+  .btn {
+    width: 12em;
+    height: 4em;
+    font-size: 0.9rem;
+  }
 }
 
 .sparkle {

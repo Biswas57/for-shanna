@@ -29,7 +29,8 @@ words.forEach((word, wordIndex) => {
   letters.forEach((letter, letterIndex) => {
     const span = document.createElement('span')
     span.textContent = letter
-    span.style.fontSize = 'clamp(2rem, 6vw, 3.2rem)' // Smaller font size
+    // More aggressive font scaling for mobile
+    span.style.fontSize = 'clamp(1.5rem, 5vw, 3.2rem)' // Smaller minimum for mobile
     span.style.display = 'inline-block'
     wordContainer.appendChild(span)
   })
