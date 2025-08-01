@@ -1,44 +1,44 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "**/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
+    "version": 2,
+    "builds": [
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
+            "src": "**/*",
+            "use": "@vercel/static"
         }
-      ]
-    },
-    {
-      "source": "/css/(.*)",
-      "headers": [
+    ],
+    "rewrites": [
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000"
+            "source": "/",
+            "destination": "/index.html"
         }
-      ]
-    },
-    {
-      "source": "/js/(.*)",
-      "headers": [
+    ],
+    "headers": [
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000"
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=86400"
+                }
+            ]
+        },
+        {
+            "source": "/css/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000"
+                }
+            ]
+        },
+        {
+            "source": "/js/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
