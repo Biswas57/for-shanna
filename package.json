@@ -1,7 +1,7 @@
 {
     "name": "for-bae",
     "version": "1.0.0",
-    "description": "FOR BAE - A beautiful animated flower display with reddish-pink roses",
+    "description": "FOR BAE - coz shannigga needs it",
     "main": "index.html",
     "scripts": {
         "dev": "python3 -m http.server 8000"
