@@ -1,61 +1,45 @@
 const title = document.querySelector('.title')
-const line1 = `I  Have  Something`.split('')
-const line2 = `For  You  Loser`.split('')
+const text = `I Have Something For You Loser`
+const words = text.split(' ')
 
 // Configure title for better responsive layout
-title.style.gap = '1rem'
+title.style.gap = '0.5rem'
 
-// Create first line
-const firstLine = document.createElement('div')
-firstLine.style.display = 'flex'
-firstLine.style.flexWrap = 'wrap'
-firstLine.style.gap = '0.3rem'
-firstLine.style.justifyContent = 'center'
-firstLine.style.alignItems = 'center'
-firstLine.style.lineHeight = '1.2'
+// Create container for all words
+const textContainer = document.createElement('div')
+textContainer.style.display = 'flex'
+textContainer.style.flexWrap = 'wrap'
+textContainer.style.gap = 'clamp(1rem, 3vw, 1.8rem)' // Space between word containers
+textContainer.style.justifyContent = 'center'
+textContainer.style.alignItems = 'center'
+textContainer.style.lineHeight = '1.2'
 
-for (let index = 0; index < line1.length; index++) {
-  if (line1[index] !== ' ') {
+// Process each word and split into individual letters
+words.forEach((word, wordIndex) => {
+  // Create a container for each word to keep letters together
+  const wordContainer = document.createElement('div')
+  wordContainer.style.display = 'flex'
+  wordContainer.style.flexWrap = 'nowrap' // Prevent letters from wrapping within a word
+  wordContainer.style.gap = '0.02rem' // Minimal space between letters
+  wordContainer.style.alignItems = 'center'
+
+  // Split word into individual letters
+  const letters = word.split('')
+  
+  letters.forEach((letter, letterIndex) => {
     const span = document.createElement('span')
-    span.textContent = line1[index]
-    span.style.fontSize = 'clamp(2.5rem, 8vw, 4rem)'
+    span.textContent = letter
+    span.style.fontSize = 'clamp(2rem, 6vw, 3.2rem)' // Smaller font size
     span.style.display = 'inline-block'
-    firstLine.appendChild(span)
-  } else {
-    const span = document.createElement('span')
-    span.style.width = 'clamp(0.3rem, 2vw, 0.8rem)'
-    span.style.display = 'inline-block'
-    firstLine.appendChild(span)
-  }
-}
+    wordContainer.appendChild(span)
+  })
 
-// Create second line
-const secondLine = document.createElement('div')
-secondLine.style.display = 'flex'
-secondLine.style.flexWrap = 'wrap'
-secondLine.style.gap = '0.3rem'
-secondLine.style.justifyContent = 'center'
-secondLine.style.alignItems = 'center'
-secondLine.style.lineHeight = '1.2'
+  // Add the word container to the main container
+  textContainer.appendChild(wordContainer)
+})
 
-for (let index = 0; index < line2.length; index++) {
-  if (line2[index] !== ' ') {
-    const span = document.createElement('span')
-    span.textContent = line2[index]
-    span.style.fontSize = 'clamp(2.5rem, 8vw, 4rem)'
-    span.style.display = 'inline-block'
-    secondLine.appendChild(span)
-  } else {
-    const span = document.createElement('span')
-    span.style.width = 'clamp(0.3rem, 2vw, 0.8rem)'
-    span.style.display = 'inline-block'
-    secondLine.appendChild(span)
-  }
-}
-
-// Add both lines to title
-title.appendChild(firstLine)
-title.appendChild(secondLine)
+// Add container to title
+title.appendChild(textContainer)
 
 const textElements = document.querySelectorAll('.title span');
 textElements.forEach((element) => {
