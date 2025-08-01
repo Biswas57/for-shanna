@@ -25,7 +25,7 @@ words.forEach((word, wordIndex) => {
 
   // Split word into individual letters
   const letters = word.split('')
-  
+
   letters.forEach((letter, letterIndex) => {
     const span = document.createElement('span')
     span.textContent = letter
