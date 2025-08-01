@@ -1,7 +1,7 @@
 {
-    "name": "flowers-for-someone",
+    "name": "for-bae",
     "version": "1.0.0",
-    "description": "A beautiful animated flower display with reddish-pink roses and custom messages",
+    "description": "FOR BAE - A beautiful animated flower display with reddish-pink roses",
     "main": "index.html",
     "scripts": {
         "dev": "python3 -m http.server 8000"
