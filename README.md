@@ -4,6 +4,24 @@
 
 Welcome to Flowers for Someone! 🌼 This repository hosts the codebase for a charming website dedicated to the art of gifting flowers to your loved ones. Express your sentiments with the beauty of nature!
 
+## 🚀 Vercel Deployment Ready!
+This project is optimized for Vercel hosting with proper caching headers and static file serving for optimal performance.
+
+## ✨ Features
+- Beautiful animated blooming reddish-pink roses 🌹
+- Typewriter text effect with custom messages ✨
+- Responsive design for all devices 📱
+- Smooth CSS animations and transitions 💫
+- Two-page experience (landing + flower animation)
+
+## 📁 Project Structure
+- `index.html` - Landing page with "I Have Something For You Loser"
+- `flower.html` - Main flower animation page with roses
+- `css/` - Compiled stylesheets
+- `scss/` - Source SCSS files (compile with `sass scss/style.scss css/style.css`)
+- `js/` - JavaScript animations and text effects
+- `images/` - Assets and icons
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
